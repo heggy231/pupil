@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+.logo {
+    font-family: "Comfortaa";
+    font-size: 3rem;
+    padding: 0 1.5rem;
+}
+.navtext-container {
+    text-transform: uppercase;
+    display:flex;
+    justify-content: space-evenly;
+    flex: 1;
+    width: 90%;
+}
+.navtext {
+    display: inline-block;
+    padding-right: 3rem;
+}

@@ -2,7 +2,7 @@ import { Route } from 'react-router-dom';
 import Landing from "./landing/Landing"
 import About from "./about/About"
 import Findmentor from "./findmentor/Findmentor"
-import Mentors from "./mentors/Findmentor"
+import Mentors from "./mentors/Mentors"
 
 const Routes = () => {
     return (

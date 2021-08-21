@@ -1,6 +1,5 @@
 import { Switch } from "react-router-dom"
-import  Routes  from "../../routes/Index"
-import "./styles.css"
+import Routes from "../../routes/Index"
 
 function Main() {
     return (
@@ -9,7 +8,6 @@ function Main() {
         <Switch>
             <Routes />
         </Switch>
-
     </main>
 </div>
     )
