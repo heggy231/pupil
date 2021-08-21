@@ -3,6 +3,7 @@ import Landing from "./landing/Landing"
 import About from "./about/About"
 import Findmentor from "./findmentor/Findmentor"
 import Mentors from "./mentors/Mentors"
+import Login from "./login/Login"
 
 const Routes = () => {
     return (
@@ -30,6 +31,13 @@ const Routes = () => {
         path="/mentors" 
         render={() => <Mentors /> }
     />    
+
+    <Route
+        exact={true}
+        path="/login" 
+        render={() => <Login /> }
+    />    
+    
 </>
     );
 };

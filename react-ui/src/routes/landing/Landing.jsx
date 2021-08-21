@@ -1,9 +1,12 @@
 const Landing = () => {
     return (
-        <>
+        <header>
+            
+
+        </header>
 
         
-        </>
+    
     )
 }
 
