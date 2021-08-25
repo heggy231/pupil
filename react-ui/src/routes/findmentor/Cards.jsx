@@ -4,7 +4,7 @@ import React from "react";
 const Cards = ({title,description,select}) => {
     console.log(title)
     return (
-    <Card style={{ width: '18rem', textAlign: 'center' }}>
+    <Card style={{ width: '18rem', textAlign: 'center', padding: '20px' }}>
   <Card.Img variant="top" />
   <Card.Body>
     <Card.Title>{title}</Card.Title>
