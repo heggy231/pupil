@@ -4,6 +4,8 @@ import About from "./about/About"
 import Findmentor from "./findmentor/Findmentor"
 import Mentors from "./mentors/Mentors"
 import Login from "./login/Login"
+import Become from "./becomementor/Become"
+import Skills from "./skills/Skills"
 
 const Routes = () => {
     return (
@@ -36,6 +38,17 @@ const Routes = () => {
         exact={true}
         path="/login" 
         render={() => <Login /> }
+    />    
+    
+    <Route
+        exact={true}
+        path="/become" 
+        render={() => <Become /> }
+    />    
+    <Route
+        exact={true}
+        path="/skills" 
+        render={() => <Skills /> }
     />    
     
 </>
