@@ -1,9 +1,9 @@
-import photo from "./photo.jpeg"
+// import photo from "./photo.jpeg"
 
 const Landing = () => {
     return (
         <header>
-            <img src={photo} alt="banner1" />
+            {/* <img src={photo} alt="banner1" /> */}
         </header>
 
         

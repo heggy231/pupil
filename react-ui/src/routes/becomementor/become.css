@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.wrapper {
+    width: 70%;
+    margin: auto;
+}
+
+.rowText1 {
+    max-width: 40%;
+}
