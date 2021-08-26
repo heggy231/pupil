@@ -42,6 +42,16 @@ app.post("/api/mentors", async (req, res) => {
   });
 });
 
+app.get("/api/mentors/:type", async (req, res) => {
+  const {type} = req.params
+  const mentors = await Mentor.findAll({
+    where: {
+      type: type
+    }
+  });
+  res.json(mentors);
+});
+
 app.get("/api/mentors", async (req, res) => {
   const mentors = await Mentor.findAll();
   res.json(mentors);
