@@ -1,16 +1,24 @@
 import { Card, Button } from "react-bootstrap";
 import React from "react";
+import { useState } from "react"
 import "./cards.css"
 
-const Cards = ({title,description,select}) => {
-  const [selected, setSelected] = React.useState(false)
+
+const Cards = ({title, description, setSelectedSkills, selectedSkills}) => {
+  const [selected, setSelected] = useState(false)
 
 const handleClick = () => {
-  setSelected(!selected)
+  if (!selected){
+    setSelected(!selected)
+    setSelectedSkills(selectedSkills.concat(title))
+  } else {
+    setSelected(!selected)
+    setSelectedSkills(selectedSkills.filter(skill => skill !== title))
+  }
 }
 
     return (
-    <Card className='card' style={{ width: '18rem', textAlign: 'center', padding: '20px', marginTop: '20px'}}>
+<Card className='card' style={{ width: '18rem', textAlign: 'center', padding: '20px', marginTop: '20px'}}>
   <Card.Img variant="top" />
   <Card.Body>
     <Card.Title>{title}</Card.Title>
