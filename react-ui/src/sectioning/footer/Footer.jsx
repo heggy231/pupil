@@ -7,7 +7,7 @@ function Footer() {
 
     return (
     <footer>
-      <div>
+      <div style={{marginTop: '10rem'}}>
         <NavLink to="/become">Become a Mentor </NavLink>
         <p>Copyright {currentYear} </p>
       </div>
