@@ -42,7 +42,7 @@ const Become = () => {
 
     const handleSubmit = async (e) => {
       e.preventDefault();
-      const results = await fetch('/api/cases', {
+      const results = await fetch('/api/mentors', {
           method: 'post',
           headers: {
               'Content-Type': 'application/json'
@@ -153,12 +153,10 @@ const Become = () => {
         <option>WI</option>
         <option>WY</option>
         <option></option>
-
-
       </Form.Select>
     </Form.Group>
     </Row>
-<Row className ="rowText1" md={2} sm={1}>
+<Row className ="mb-4 rowText1" md={2} sm={1}>
     <Form.Group as={Col} controlId="formGridZip">
       <Form.Label>Zip</Form.Label>
       <Form.Control />
@@ -166,7 +164,7 @@ const Become = () => {
   </Row>
 
   <Form.Group className="mb-3" id="formGridCheckbox">
-    <Form.Check onClick = {handleCheckChange} value="hello world" type="checkbox" label="Check me out" />
+    <Form.Check onClick = {handleCheckChange} value="hello world" type="checkbox" label="I agree to give my very best to those I am mentoring." required/>
   </Form.Group>
 
   <Button variant="primary" type="submit" onSubmit = {handleSubmit}>
