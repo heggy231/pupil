@@ -11,3 +11,7 @@
 .rowText1 {
     max-width: 40%;
 }
+
+input[type="radio"]{
+    margin: 0 5px 0 10px;
+  }

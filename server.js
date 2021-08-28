@@ -28,6 +28,7 @@ app.get("/heartbeat", (req, res) => {
 });
 
 app.post("/api/mentors", async (req, res) => {
+  console.log("got it done")
   const { firstName, lastName, email, type, skills, about } = req.body;
   const newMentor = await Mentor.create({
     firstName,

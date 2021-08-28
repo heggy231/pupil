@@ -40,21 +40,22 @@ const Become = () => {
       console.log(check);
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit =  async (e) => {
       e.preventDefault();
+      console.log("posting")
       const results = await fetch('/api/mentors', {
-          method: 'post',
+          method: 'POST',
           headers: {
               'Content-Type': 'application/json'
           },
           body: JSON.stringify({ firstName, lastName, email, type, skill, about, })
       });
-      console.log(await results.json());
+      console.log(results);
       setFirstName('');
       setLastName('');
       setEmail('');
       setType('');
-      setSkill('');
+      // setSkill('');
       setAbout('');
     }
   
@@ -62,7 +63,7 @@ const Become = () => {
 
     return (
       <div className="wrapper">
-  <Form>
+  <Form onSubmit = {handleSubmit}>
    <Row className="mb-3 sm xs={2}">
     <Form.Group as={Col} controlId="formGridName">
       <Form.Label>First Name</Form.Label>
@@ -80,14 +81,19 @@ const Become = () => {
     <Form.Control onChange={handleEmailChange} value={email} type="email"placeholder="jimmy@aol.com" />
   </Form.Group>
 
-  <Form.Group className="mb-3 sm" id="formGridCheckbox">
-    Please select 
-    <Form.Check type="checkbox" label="Hard Skills" />
-    <Form.Check type="checkbox" label="Soft Skills" />
-    <Form.Check type="checkbox" label="Life Skills" />
+  <Form.Group className = 'mb-3'>   
+  <Form.Label className = "mb-2">Please select skill type</Form.Label> 
+  <div>
+  <input onChange = {handleTypeChange} type="radio" id="type1" name="type" value="hard_skills" />
+  <label htmlFor="type1"> Hard Skills </label><br />
+  <input onChange = {handleTypeChange}  type="radio" id="type2" name="type" value="soft_skills" />
+  <label htmlFor="type2"> Soft Skills </label><br />  
+  <input onChange = {handleTypeChange}  type="radio" id="type3" name="type" value="life_skills" />
+  <label htmlFor="type3"> Life Skills </label>
+  </div>
   </Form.Group>
 
-  <Form.Group className="mb-3 xs={1}" >
+  <Form.Group className="mt-1 mb-3 xs={1}" >
     <Form.Label>About</Form.Label>
     <Form.Control onChange={handleAboutChange} value={about} placeholder="Tell us about yourself" />
   </Form.Group>
@@ -166,7 +172,7 @@ const Become = () => {
     <Form.Check onClick = {handleCheckChange} value="hello world" type="checkbox" label="I agree to give my very best to those I am mentoring." required/>
   </Form.Group>
 
-  <Button variant="primary" type="submit" onSubmit = {handleSubmit}>
+  <Button variant="primary" type="submit" >
     Submit
   </Button>
  </Form>

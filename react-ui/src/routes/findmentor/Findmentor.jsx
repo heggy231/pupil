@@ -22,7 +22,7 @@ const Findmentor = () => {
   }
     return (
       <div style={{textAlign:'center'}}>
-    <div style={{display:"flex", justifyContent:"space-evenly", flexWrap: 'Wrap', padding: '10px'}}>
+    <div style={{display:"flex", justifyContent:"space-evenly", flexWrap: 'Wrap'}}>
       {cardsArray.map((card)=>
         <Cards slug={card.slug} title={card.title} description={card.description} setSelectedSkills={setSelectedSkills} selectedSkills={selectedSkills} onClick={searchPeople}/>
       )} 
