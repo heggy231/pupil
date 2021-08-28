@@ -27,7 +27,7 @@ const Findmentor = () => {
         <Cards slug={card.slug} title={card.title} description={card.description} setSelectedSkills={setSelectedSkills} selectedSkills={selectedSkills} onClick={searchPeople}/>
       )} 
     </div>
-    <Button onClick={()=> searchPeople(selectedSkills)} disabled={selectedSkills.length ? false : true} variant="secondary" size="lg" style={{marginTop: '20px'}}>
+    <Button onClick={()=> searchPeople(selectedSkills)} disabled={selectedSkills.length ? false : true} size="lg" style={{marginTop: '20px'}}>
       Next
     </Button>
     </div>

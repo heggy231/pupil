@@ -62,8 +62,8 @@ const Become = () => {
 
     return (
       <div className="wrapper">
-        <Form>
-  <Row className="mb-3 sm xs={2}">
+  <Form>
+   <Row className="mb-3 sm xs={2}">
     <Form.Group as={Col} controlId="formGridName">
       <Form.Label>First Name</Form.Label>
       <Form.Control onChange={handleFnameChange} value={firstName} type="First name" placeholder="First Name" />
@@ -102,7 +102,6 @@ const Become = () => {
       <Form.Label>State</Form.Label>
       <Form.Select defaultValue="Choose...">
         <option>Choose...</option>
-        <option>...</option>
         <option>AL</option>
         <option>AK</option>
         <option>AZ</option>
@@ -170,7 +169,7 @@ const Become = () => {
   <Button variant="primary" type="submit" onSubmit = {handleSubmit}>
     Submit
   </Button>
-</Form>
+ </Form>
 </div>
     )
 }
