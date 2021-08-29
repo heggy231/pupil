@@ -53,6 +53,16 @@ app.get("/api/mentors/:type", async (req, res) => {
   res.json(mentors);
 });
 
+app.get("/api/mentors/:id", async (req, res) => {
+  const {mentorId} = req.params
+  const mentors = await Mentor.findAll({
+    where: {
+      id: mentorId
+    }
+  });
+  res.json(mentors);
+});
+
 app.get("/api/mentors", async (req, res) => {
   const mentors = await Mentor.findAll();
   res.json(mentors);

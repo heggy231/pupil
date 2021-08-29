@@ -6,6 +6,7 @@ import Mentors from "./mentors/Mentors"
 import Login from "./login/Login"
 import Become from "./becomementor/Become"
 import Skills from "./skills/Skills"
+import Profiles from "./profile/Profiles"
 
 const Routes = () => {
     return (
@@ -50,7 +51,11 @@ const Routes = () => {
         path="/skills" 
         render={() => <Skills /> }
     />    
-    
+    <Route
+        exact={true}
+        path="/profiles" 
+        render={() => <Profiles /> }
+    />    
 </>
     );
 };

@@ -1,6 +1,8 @@
 import { Card, Button } from "react-bootstrap"
 import { useState, useEffect } from "react"
 import React from "react"
+import { Link } from "react-router-dom"
+
 const Mentors = () => {
 
     const [isLoading, setIsLoading] = useState(true)
@@ -20,6 +22,9 @@ const Mentors = () => {
         })
     }
     return (
+      <>
+      <header>
+      </header>
         <div style= {{display: 'flex', flexWrap: 'wrap', justifyContent:'center'}}>
            {isLoading ? <h1>Loading</h1> : mentors?.map((mentors) => {
             return (
@@ -31,7 +36,7 @@ const Mentors = () => {
                  <Card.Text>
 
                  </Card.Text>
-                 <Button variant="primary">Select Mentor</Button>
+                 <Link to= {`./profiles/${mentors.id}`} ><Button variant="dark">Select Mentor</Button></Link>
                </Card.Body>
              </Card>
              </div>
@@ -39,6 +44,8 @@ const Mentors = () => {
            }
            )} 
         </div> 
+        
+        </>
     )
 }
 

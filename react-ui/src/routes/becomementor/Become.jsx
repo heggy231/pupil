@@ -172,7 +172,7 @@ const Become = () => {
     <Form.Check onClick = {handleCheckChange} value="hello world" type="checkbox" label="I agree to give my very best to those I am mentoring." required/>
   </Form.Group>
 
-  <Button variant="primary" type="submit" >
+  <Button variant="dark" type="submit" >
     Submit
   </Button>
  </Form>

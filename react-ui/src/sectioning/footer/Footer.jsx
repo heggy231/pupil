@@ -6,7 +6,7 @@ const currentYear = new Date().getFullYear()
 function Footer() {
 
     return (
-    <footer>
+    <footer >
       <div style={{marginTop: '10rem'}}>
         <NavLink to="/become">Become a Mentor </NavLink>
         <p>Copyright {currentYear} </p>

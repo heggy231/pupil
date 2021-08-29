@@ -25,7 +25,7 @@ const handleClick = () => {
     <Card.Text style= {{textAlign:"center"}}>
       {description}
     </Card.Text>
-    <Button onClick={handleClick} variant="primary">{selected ? 'Selected' : 'Select'}</Button>
+    <Button onClick={handleClick} variant="dark">{selected ? 'Selected' : 'Select'}</Button>
   </Card.Body>
 </Card>
     )

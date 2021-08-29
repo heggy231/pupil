@@ -1,10 +1,13 @@
 // import photo from "./photo.jpeg"
+import './landing.css'
 
 const Landing = () => {
     return (
+        <>
         <header>
-            {/* <img src={photo} alt="banner1" /> */}
         </header>
+        
+        </>
 
         
     
