@@ -4,7 +4,9 @@
     font-family: "Comfortaa";
     font-size: 3rem;
     padding: 0 1.5rem;
+    color: rgb(red, green, rgb(0, 136, 160))
 }
+
 .navtext-container {
     text-transform: uppercase;
     display:flex;

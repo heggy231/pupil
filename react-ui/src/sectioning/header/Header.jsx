@@ -6,9 +6,7 @@ function Header() {
      <header>
        <Navigation/>
      </header>
-     <div>
-       <p>This is the way we ball</p>
-     </div>
+  
      </>
     )
     

@@ -2,6 +2,7 @@ footer {
     text-align: center;
 }
 
-/* footer p {
-    margin: auto;
-} */
+footer p div {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

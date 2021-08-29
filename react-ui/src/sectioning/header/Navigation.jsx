@@ -11,15 +11,15 @@ function Navigation() {
        <Navbar.Toggle />
        <Navbar.Collapse>
        <Nav className="navtext-container">
-         <Nav.Link className="navtext" href="/about">About</Nav.Link>
          <Nav.Link className="navtext" href="/findmentor">Find Mentor</Nav.Link>
-         <Nav.Link className="navtext" href="mentors">Our Mentors</Nav.Link>
+         <Nav.Link className="navtext" href="/mentors">Our Mentors</Nav.Link>
+         <Nav.Link className="navtext" href="/about">About</Nav.Link>
        </Nav>   
        </Navbar.Collapse>
      </Navbar>
-     </Container >
-    )
-    
+     </Container>
+    )   
+
 }
 
 export default Navigation
