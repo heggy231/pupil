@@ -11,7 +11,7 @@ const Profiles = (props) => {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log("res is profile/id ===****>!!!!!", res);
+        console.log("res is profile/id !!!!!", res);
         
         setProfile(res);
         setIsLoading(false);
@@ -25,7 +25,8 @@ const Profiles = (props) => {
     <>
       {isLoading ? 
       (<div>Loading...</div>) : (
-    <div style={{border: 'solid .1px black', padding:'5rem', marginTop: '2rem'}}>
+     <div> 
+      < div style={{border: 'solid .1px black', padding:'6rem', marginTop: '1rem'}}>
         <div className ="text-container">
           <p className ="first-last-name" style={{fontFamily: "Roboto"}}><h1> {profile[0].firstName} {profile[0].lastName}</h1></p>
         <div className="skills-container">
@@ -36,13 +37,9 @@ const Profiles = (props) => {
         </div>
         </div>
 
-
-
-
-    </div>
+     </div>
       
-
-                                       )}
+      </div>  )}
     </>
   );
 };

@@ -6,7 +6,7 @@ import Mentors from "./mentors/Mentors"
 import Login from "./login/Login"
 import Become from "./becomementor/Become"
 import Profiles from "./profile/Profiles"
-import Mentorstype from './findmentor/Mentorstype';
+import Skilltypes from './findmentor/Skilltypes';
 
 const Routes = () => {
     return (
@@ -52,8 +52,8 @@ const Routes = () => {
     />    
     
      <Route
-        path="/mentorstype/type:id" 
-        component={Mentorstype}
+        path="/skilltypes/type:id" 
+        component={Skilltypes}
     />    
 </>
     );

@@ -51,7 +51,7 @@ app.get("/api/mentors", async (req, res) => {
 });
 
 
-app.get("/api/mentorstype/:type", async (req, res) => {
+app.get("/api/skilltypes/:type", async (req, res) => {
   const mentorType = req.params.type
   const getMentorType = await Mentor.findAll({
     where: {
