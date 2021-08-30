@@ -5,7 +5,6 @@ import Findmentor from "./findmentor/Findmentor"
 import Mentors from "./mentors/Mentors"
 import Login from "./login/Login"
 import Become from "./becomementor/Become"
-import Skills from "./skills/Skills"
 import Profiles from "./profile/Profiles"
 import Mentorstype from './findmentor/Mentorstype';
 
@@ -46,18 +45,14 @@ const Routes = () => {
         path="/become" 
         render={() => <Become /> }
     />    
-    <Route
-        exact={true}
-        path="/skills" 
-        render={() => <Skills /> }
-    />    
+   
     <Route
         path="/profiles/:id" 
         component={Profiles}
     />    
     
      <Route
-        path="/mentorstype" 
+        path="/mentorstype/type:id" 
         component={Mentorstype}
     />    
 </>
