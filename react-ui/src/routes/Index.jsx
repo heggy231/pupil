@@ -52,7 +52,7 @@ const Routes = () => {
     />    
     
      <Route
-        path="/skilltypes/type:id" 
+        path="/skilltypes/:type" 
         component={Skilltypes}
     />    
 </>

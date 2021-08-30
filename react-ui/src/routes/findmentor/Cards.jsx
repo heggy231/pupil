@@ -4,13 +4,15 @@ import { useState } from "react"
 import "./cards.css"
 
 
-const Cards = ({slug, title, description, setSelectedSkills, selectedSkills}) => {
+const Cards = ({slug, title, description, setSelectedSkills, setLoadCard, setSkillTitle}) => {
   const [selected, setSelected] = useState(false)
 
 const handleClick = () => {
   if (!selected){
     setSelected(!selected)
     setSelectedSkills(slug)
+    setSkillTitle(title)
+    setLoadCard(false)
   } else {
     setSelected(!selected)
     setSelectedSkills("")
