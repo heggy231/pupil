@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from "react";
+// import { mentors } from "../mentors"
 
 
-const Profiles = () => {
-  const [profile, setProfile] = useState([]);
+const Profiles = (props) => {
+  const [profile, setProfile] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/mentors`,
+    fetch(`/api/profiles/${props.match.params.id}`,
       {
         method: "GET",
-        headers: new Headers({
-        })
       }
-    )
-      .then(res => res.json())
+    ).then(res => res.json())
       .then(res => {
+        console.log(res)
         setProfile(res.items);
         setIsLoading(false);
       })
       .catch(error => console.log(error));
   },);
-
+  console.log(props.match.params.id)
   return (
+
     <>
-          {isLoading && <p>Wait I'm Loading comments for you</p>}
+          {isLoading && <p>Almost done loading .. </p>}
 
     </>
   )}

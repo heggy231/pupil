@@ -27,6 +27,7 @@ app.get("/heartbeat", (req, res) => {
   res.send("Hello!! I am heartbeat Kingsley channel!");
 });
 
+// Posting data from the form to the database.
 app.post("/api/mentors", async (req, res) => {
   console.log("got it done")
   const { firstName, lastName, email, type, skills, about } = req.body;
@@ -43,30 +44,34 @@ app.post("/api/mentors", async (req, res) => {
   });
 });
 
-app.get("/api/mentors/:type", async (req, res) => {
-  const {type} = req.params
-  const mentors = await Mentor.findAll({
-    where: {
-      type: type
-    }
-  });
-  res.json(mentors);
-});
-
-app.get("/api/mentors/:id", async (req, res) => {
-  const {mentorId} = req.params
-  const mentors = await Mentor.findAll({
-    where: {
-      id: mentorId
-    }
-  });
-  res.json(mentors);
-});
-
+// This GET request gets all mentors from the database.
 app.get("/api/mentors", async (req, res) => {
   const mentors = await Mentor.findAll();
   res.json(mentors);
 });
+
+
+app.get("/api/mentorstype/:type", async (req, res) => {
+  const mentorType = req.params.type
+  const getMentorType = await Mentor.findAll({
+    where: {
+      type: mentorType
+    }
+  });
+  res.json(getMentorType);
+});
+
+app.get("/api/profiles/:id", async (req, res) => {
+  const mentorId = req.params.id
+  const getMentorId = await Mentor.findAll({
+    where: {
+      id: mentorId
+    }
+  });
+  res.json(getMentorId);
+});
+
+
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);

@@ -7,6 +7,7 @@ import Login from "./login/Login"
 import Become from "./becomementor/Become"
 import Skills from "./skills/Skills"
 import Profiles from "./profile/Profiles"
+import Mentorstype from './findmentor/Mentorstype';
 
 const Routes = () => {
     return (
@@ -39,8 +40,7 @@ const Routes = () => {
         exact={true}
         path="/login" 
         render={() => <Login /> }
-    />    
-    
+    />       
     <Route
         exact={true}
         path="/become" 
@@ -52,9 +52,13 @@ const Routes = () => {
         render={() => <Skills /> }
     />    
     <Route
-        exact={true}
-        path="/profiles" 
-        render={() => <Profiles /> }
+        path="/profiles/:id" 
+        component={Profiles}
+    />    
+    
+     <Route
+        path="/mentorstype" 
+        component={Mentorstype}
     />    
 </>
     );
