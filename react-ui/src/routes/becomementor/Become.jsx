@@ -7,7 +7,7 @@ const Become = () => {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [type, setType] = useState("");
-    const [skill, setSkill] = useState("");
+    // const [skill, setSkill] = useState("");
     const [about, setAbout] = useState("");
     const [check, setCheck] = useState([""]);
     
@@ -27,10 +27,10 @@ const Become = () => {
       setType(event.target.value)
       console.log(type);
     }
-      const handleSkillChange = (event) => {
-      setSkill(event.target.value)
-      console.log(skill);
-    }
+    //   const handleSkillChange = (event) => {
+    //   setSkill(event.target.value)
+    //   console.log(skill);
+    // }
     const handleAboutChange = (event) => {
       setAbout(event.target.value)
       console.log(about);
@@ -48,7 +48,7 @@ const Become = () => {
           headers: {
               'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ firstName, lastName, email, type, skill, about, })
+          body: JSON.stringify({ firstName, lastName, email, type, /*skill,*/ about, })
       });
       console.log(results);
       setFirstName('');

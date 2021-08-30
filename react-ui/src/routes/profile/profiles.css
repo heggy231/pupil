@@ -1,0 +1,15 @@
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-wrapper {
+    margin-bottom: 10rem;
+}
+.skills-container{
+    font-weight: 650;
+}
+
+.first-last-name{
+    text-transform: uppercase;
+}

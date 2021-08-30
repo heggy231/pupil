@@ -1,6 +1,7 @@
 import Cards from "./Cards"
 import { Button } from "react-bootstrap"
 import React from "react"
+import { Link } from "react-router-dom"
 
 
 const Findmentor = () => {
@@ -13,7 +14,7 @@ const Findmentor = () => {
   ]
   const searchPeople = (skills) => {
     console.log(skills)
-    fetch(`http://localhost:8080/api/mentors/${skills}`)
+    fetch(`http://localhost:8080/api/mentorstype/${skills}`)
     .then(res=>res.json())
     .then((data) => {
       console.log(data);
@@ -27,9 +28,9 @@ const Findmentor = () => {
         <Cards slug={card.slug} title={card.title} description={card.description} setSelectedSkills={setSelectedSkills} selectedSkills={selectedSkills} onClick={searchPeople}/>
       )} 
     </div>
-    <Button variant="dark" onClick={()=> searchPeople(selectedSkills)} disabled={selectedSkills.length ? false : true} size="lg" style={{marginTop: '20px'}}>
+    <Link to ={`./Mentorstype/`}> <Button  variant="dark" onClick={()=> searchPeople(selectedSkills)} disabled={selectedSkills.length ? false : true} size="lg" style={{marginTop: '20px'}}>
       Next
-    </Button>
+    </Button> </Link>
     </div>
     )
 }

@@ -1,31 +1,50 @@
 import React, { useState, useEffect } from "react";
+import "./profiles.css"
 
-
-const Profiles = () => {
-  const [profile, setProfile] = useState([]);
+const Profiles = (props) => {
+  const [profile, setProfile] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/mentors`,
-      {
-        method: "GET",
-        headers: new Headers({
-        })
-      }
-    )
-      .then(res => res.json())
-      .then(res => {
-        setProfile(res.items);
+    fetch(`/api/profiles/${props.match.params.id}`, {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log("res is profile/id ===****>!!!!!", res);
+        
+        setProfile(res);
         setIsLoading(false);
       })
-      .catch(error => console.log(error));
-  },);
+      .catch((error) => console.log(error));
+  }, [props.match.params.id]);
+  console.log(props.match.params.id);
 
+  
   return (
     <>
-          {isLoading && <p>Wait I'm Loading comments for you</p>}
+      {isLoading ? 
+      (<div>Loading...</div>) : (
+    <div style={{border: 'solid .1px black', padding:'5rem', marginTop: '2rem'}}>
+        <div className ="text-container">
+          <p className ="first-last-name" style={{fontFamily: "Roboto"}}><h1> {profile[0].firstName} {profile[0].lastName}</h1></p>
+        <div className="skills-container">
+          <p>{profile[0].skills}</p>
+        </div>
+        <div>
+          <p>{profile[0].about}</p>
+        </div>
+        </div>
 
+
+
+
+    </div>
+      
+
+                                       )}
     </>
-  )}
+  );
+};
 
-export default Profiles
+export default Profiles;

@@ -5,8 +5,8 @@ import Findmentor from "./findmentor/Findmentor"
 import Mentors from "./mentors/Mentors"
 import Login from "./login/Login"
 import Become from "./becomementor/Become"
-import Skills from "./skills/Skills"
 import Profiles from "./profile/Profiles"
+import Mentorstype from './findmentor/Mentorstype';
 
 const Routes = () => {
     return (
@@ -39,22 +39,21 @@ const Routes = () => {
         exact={true}
         path="/login" 
         render={() => <Login /> }
-    />    
-    
+    />       
     <Route
         exact={true}
         path="/become" 
         render={() => <Become /> }
     />    
+   
     <Route
-        exact={true}
-        path="/skills" 
-        render={() => <Skills /> }
+        path="/profiles/:id" 
+        component={Profiles}
     />    
-    <Route
-        exact={true}
-        path="/profiles" 
-        render={() => <Profiles /> }
+    
+     <Route
+        path="/mentorstype/type:id" 
+        component={Mentorstype}
     />    
 </>
     );
